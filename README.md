@@ -7,7 +7,7 @@ email: cms@juejin.com
 
 password: cms123CMS
 
-clone后首先init，首次启动前需要build，之后直接`pnpm run develop`即可，若有修改需要再次build。
+clone后首先init，首次启动前需要build，之后直接`pnpm run develop`即可，若有修改需要再次build，命令如下。
 
 ### `init`
 ```
