@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "top_tabs",
+  "info": {
+    "singularName": "top-tab",
+    "pluralName": "top-tabs",
+    "displayName": "Top Tab",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "key": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "min": 0
+    },
+    "remark": {
+      "type": "string"
+    }
+  }
+}
