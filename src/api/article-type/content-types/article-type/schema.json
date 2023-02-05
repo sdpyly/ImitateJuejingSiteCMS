@@ -12,20 +12,20 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "label": {
+    "type": {
       "type": "string"
-    },
-    "articles": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::article.article",
-      "mappedBy": "labels"
     },
     "level": {
       "type": "integer",
       "unique": true,
       "min": 2,
       "default": 2
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "type"
     }
   }
 }

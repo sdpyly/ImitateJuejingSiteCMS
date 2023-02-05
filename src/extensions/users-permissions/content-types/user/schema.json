@@ -107,6 +107,24 @@
       "relation": "manyToMany",
       "target": "api::badge.badge",
       "mappedBy": "users"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "author"
+    },
+    "likeArticles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "mappedBy": "likeUsers"
+    },
+    "likeComments": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "likeUsers"
     }
   }
 }

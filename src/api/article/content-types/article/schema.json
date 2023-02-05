@@ -21,9 +21,9 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "articles"
     },
-    "labels": {
+    "type": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::article-type.article-type",
       "inversedBy": "articles"
     },
@@ -48,6 +48,24 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "article"
+    },
+    "likeUsers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "likeArticles"
+    },
+    "labels": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article-label.article-label",
+      "inversedBy": "articles"
     }
   }
 }
